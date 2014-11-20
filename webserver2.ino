@@ -39,9 +39,9 @@ void loop(){
             if(client.available()){
                 
                 // Si existen Bytes disponibles en la peticion
-                // se asignan a la variable c por medio del metodo read()
-                // y se resta de la cantidad de bytes disponibles en la
-                // peticion.
+                // se asigna uno a uno a la variable c por medio del metodo
+                // read() y se resta de la cantidad de bytes disponibles en
+                // la peticion.
                 
                 char c = client.read();
                 Serial.print(c);
@@ -58,7 +58,8 @@ void loop(){
                     client.println("Connection: close");
                     client.println();
                     client.println("<h1>Hola Mundo!</h1>");
-                    break;
+                    
+                    break; // Para salir del loop cuando se termine de enviar la respuesta
                     
                 }
                 
